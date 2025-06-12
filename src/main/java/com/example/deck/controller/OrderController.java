@@ -7,7 +7,8 @@ import com.example.deck.service.OrderService;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000","https://deck-7kf5-merjinas-projects.vercel.app"}) // Allow your React app to make requests
+
 @RestController
 @RequestMapping("/api/orders")
 public class OrderController {

@@ -23,7 +23,8 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/api/quotations")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000","https://deck-7kf5-merjinas-projects.vercel.app"}) // Allow your React app to make requests
+
 public class QuotationController {
 
     @Autowired
