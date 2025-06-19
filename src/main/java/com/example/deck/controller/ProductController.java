@@ -120,7 +120,7 @@ public class ProductController {
                 throw new RuntimeException("Failed to store file.", e);
             }
         }
-
+    
         return ResponseEntity.ok(productService.saveProduct(existingProduct));
     }
 
