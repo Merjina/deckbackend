@@ -47,7 +47,7 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.cors().configurationSource(corsConfigurationSource()) // ✅ apply only this one CORS config
+        http.cors().configurationSource(corsConfigurationSource())
             .and()
             .csrf().disable()
             .authorizeHttpRequests()
@@ -72,8 +72,8 @@ public class SecurityConfig {
             "https://deck-7kf5-merjinas-projects.vercel.app"
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
-        configuration.setAllowCredentials(true); // ✅ needed for cookies/JWT
+        configuration.setAllowedHeaders(Arrays.asList("*"));
+        configuration.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
