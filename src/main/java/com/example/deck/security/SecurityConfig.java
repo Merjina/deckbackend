@@ -47,9 +47,10 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.cors().configurationSource(corsConfigurationSource())
-            .and()
+        http
             .csrf().disable()
+            .cors().configurationSource(corsConfigurationSource()) // ✅ must come before authorize
+            .and()
             .authorizeHttpRequests()
             .requestMatchers(
                 "/api/auth/**",
