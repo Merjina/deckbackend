@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = {"http://localhost:3000","https://deck-7kf5-merjinas-projects.vercel.app","https://deck-7kf5.vercel.app"}) // Allow your React app to make requests
+@CrossOrigin(origins = {"http://localhost:3000","https://deckline.vercel.app/","https://deck-7kf5-merjinas-projects.vercel.app","https://deck-7kf5.vercel.app","https://deckline.vercel.app/"}) // Allow your React app to make requests
 public class AuthController {
 
     @Autowired
