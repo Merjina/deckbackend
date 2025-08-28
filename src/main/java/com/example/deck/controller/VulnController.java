@@ -15,7 +15,10 @@ import java.security.MessageDigest;
 
 @RestController
 @RequestMapping("/api/vuln")
+@CrossOrigin(origins = {"http://localhost:3000","https://deck-7kf5-merjinas-projects.vercel.app","https://deck-7kf5.vercel.app","https://deckline.vercel.app/"}) // Allow your React app to make requests
+
 public class VulnController {
+	
 
     @Autowired
     private JdbcTemplate jdbcTemplate;

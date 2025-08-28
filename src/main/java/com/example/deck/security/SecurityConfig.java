@@ -72,7 +72,7 @@ public class SecurityConfig {
         configuration.setAllowedOrigins(Arrays.asList(
             "http://localhost:3000",
             "https://deck-7kf5.vercel.app",
-            "https://deck-7kf5-merjinas-projects.vercel.app"
+            "https://deck-7kf5-merjinas-projects.vercel.app","https://deckline.vercel.app/"
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
